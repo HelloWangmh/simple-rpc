@@ -8,7 +8,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import lombok.extern.slf4j.Slf4j;
-import wang.mh.protocol.RpcDecoderHandler;
+import wang.mh.protocol.RpcResponseDecoderHandler;
+import wang.mh.protocol.RpcResponseEncoderHandler;
 
 @Slf4j
 public class RpcServer {
@@ -29,8 +30,9 @@ public class RpcServer {
                        @Override
                        public void initChannel(SocketChannel ch) throws Exception {
                            ch.pipeline()
-                                   .addLast(new RpcDecoderHandler())
-                                   .addLast(new EchoServerHandler());
+                                   .addLast(new RpcResponseDecoderHandler())
+                                   .addLast(new EchoServerHandler())
+                                   .addLast(new RpcResponseEncoderHandler());
                        }
                    });
            ChannelFuture future = bootstrap.bind().sync();

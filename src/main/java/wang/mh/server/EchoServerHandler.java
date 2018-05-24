@@ -15,6 +15,9 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter{
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         RpcMessage message = (RpcMessage) msg;
         log.info("receive service : {}, method : {}", message.getServiceName(), message.getMethodName());
+        String response = message.getMethodName() + " has been executed";
+        message.setResponse(response);
+        ctx.channel().writeAndFlush(message);
     }
 
 

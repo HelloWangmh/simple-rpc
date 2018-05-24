@@ -11,9 +11,7 @@ public class RpcMessage {
 
     private String methodName;
 
-    private byte[] response;
-
-    private int totalLength;
+    private String response;
 
     public RpcMessage(String serviceName, String methodName) {
         this.serviceName = serviceName;

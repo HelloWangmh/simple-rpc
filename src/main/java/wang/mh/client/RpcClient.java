@@ -7,7 +7,8 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import wang.mh.protocol.RpcEncoderHandler;
+import wang.mh.protocol.RpcRequestDecoderHandler;
+import wang.mh.protocol.RpcRequestEncoderHandler;
 import wang.mh.protocol.RpcMessage;
 
 import java.net.InetSocketAddress;
@@ -33,7 +34,8 @@ public class RpcClient {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline()
-                                    .addLast(new RpcEncoderHandler());
+                                    .addLast(new RpcRequestEncoderHandler())
+                                    .addLast(new RpcRequestDecoderHandler());
                         }
                     });
             ChannelFuture f = bootstrap.connect().sync();
