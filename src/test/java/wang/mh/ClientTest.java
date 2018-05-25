@@ -3,7 +3,7 @@ package wang.mh;
 import org.junit.Test;
 import wang.mh.client.RpcClient;
 
-public class BaseTest {
+public class ClientTest {
 
     @Test
     public void start() throws Exception {
