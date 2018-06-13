@@ -2,49 +2,61 @@ package wang.mh.protocol;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
+
+import java.io.*;
+import java.util.List;
 
 @Slf4j
 public class RpcMsgConverter {
 
+    private static final int BASIC_LENGTH = 4;  //length
 
-    public static ByteBuf encode(RpcMessage message, boolean fromClient) {
-        byte[] serviceName = message.getServiceName().getBytes();
-        byte[] methodName = message.getMethodName().getBytes();
-        byte[] response = null;
-        int totalLength;
-        if (fromClient) {
-             totalLength = serviceName.length + methodName.length + 8;
+    public static ByteBuf encode(Serializable message) throws IOException {
+        byte[] msgBytes = obj2Byte(message);
+        ByteBuf lengthBuf = Unpooled.buffer(4);
+        lengthBuf.writeInt(msgBytes.length);
+        return Unpooled.wrappedBuffer(lengthBuf.array(), msgBytes);
+    }
+
+    public static boolean decode(ByteBuf byteBuf, List<Object> out, boolean isRequest) throws IOException, ClassNotFoundException{
+        if (byteBuf.readableBytes() < BASIC_LENGTH) {
+            return false;
+        }
+        byteBuf.markReaderIndex();
+        int length = byteBuf.readInt();
+        if (byteBuf.readableBytes() < (length)) {
+            byteBuf.resetReaderIndex();//重置读索引
+            return false;
+        }
+        byte[] msgBytes = new byte[length];
+        byteBuf.readBytes(msgBytes, 0, length);
+
+
+        if (isRequest) {
+            RqMessage message = (RqMessage) byte2Object(msgBytes);
+            out.add(message);
         } else {
-            response = message.getResponse().getBytes();
-            totalLength = serviceName.length + methodName.length + response.length + 12;
+            RsMessage message = (RsMessage) byte2Object(msgBytes);
+            out.add(message);
         }
-        ByteBuf byteBuf = Unpooled.buffer(totalLength);
-        byteBuf.writeInt(totalLength);
-        byteBuf.writeInt(serviceName.length);
-        byteBuf.writeBytes(serviceName);
-        byteBuf.writeInt(methodName.length);
-        byteBuf.writeBytes(methodName);
-        if (! fromClient) {
-            byteBuf.writeInt(response.length);
-            byteBuf.writeBytes(response);
-        }
-        return byteBuf;
+        return true;
     }
 
-    public static RpcMessage decode(ByteBuf byteBuf, boolean fromClient) {
-        int serviceNameLength = byteBuf.readInt();
-        String serviceName = byteBuf.readBytes(serviceNameLength).toString(CharsetUtil.UTF_8);
-        int methodNameLength = byteBuf.readInt();
-        String methodName = byteBuf.readBytes(methodNameLength).toString(CharsetUtil.UTF_8);
-        log.info("decode message serviceName : {}, methodName : {}", serviceName, methodName);
-        RpcMessage msg = new RpcMessage(serviceName, methodName);
-        if (! fromClient) {
-            int responseLength = byteBuf.readInt();
-            String response = byteBuf.readBytes(responseLength).toString(CharsetUtil.UTF_8);
-            msg.setResponse(response);
+    private static byte[] obj2Byte(Object obj) throws IOException {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        try (ObjectOutputStream oos = new ObjectOutputStream(bos)){
+            oos.writeObject(obj);
+            return bos.toByteArray();
         }
-        return msg;
     }
+
+    private static Object byte2Object(byte[] bytes) throws IOException, ClassNotFoundException {
+        ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
+        try (ObjectInputStream ois = new ObjectInputStream(bis)){
+            return  ois.readObject();
+        }
+    }
+
+
 }

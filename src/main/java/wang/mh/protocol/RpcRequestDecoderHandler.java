@@ -11,14 +11,7 @@ public class RpcRequestDecoderHandler extends ByteToMessageDecoder{
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf byteBuf, List<Object> out) throws Exception {
-        byteBuf.markReaderIndex();
-        int totalLength = byteBuf.readInt();
-        if (byteBuf.readableBytes() < totalLength) {
-            byteBuf.resetReaderIndex();
-        } else {
-            RpcMessage msg = RpcMsgConverter.decode(byteBuf, false);
-            log.info("result : {}", msg.getResponse());
-        }
+        RpcMsgConverter.decode(byteBuf, out, false);
     }
 
 }

@@ -6,12 +6,11 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class RpcRequestEncoderHandler extends MessageToByteEncoder<RpcMessage>{
+public class RpcRequestEncoderHandler extends MessageToByteEncoder<RqMessage>{
 
     @Override
-    protected void encode(ChannelHandlerContext chx, RpcMessage message, ByteBuf byteBuf) throws Exception {
-        log.info("encode message serviceName : {}, methodName : {}", message.getServiceName(), message.getMethodName());
-        byteBuf = RpcMsgConverter.encode(message, true);
+    protected void encode(ChannelHandlerContext chx, RqMessage message, ByteBuf byteBuf) throws Exception {
+        byteBuf = RpcMsgConverter.encode(message);
         chx.writeAndFlush(byteBuf);
     }
 

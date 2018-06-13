@@ -1,4 +1,4 @@
-package wang.mh;
+package wang.mh.service;
 
 public class ComputeServiceImpl implements ComputeService {
 
@@ -6,5 +6,4 @@ public class ComputeServiceImpl implements ComputeService {
     public int addOne(int i) {
         return ++i;
     }
-
 }
