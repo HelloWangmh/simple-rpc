@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 
 @Slf4j
 @ChannelHandler.Sharable
-public class EchoServerHandler extends ChannelInboundHandlerAdapter{
+public class DealRequestHandler extends ChannelInboundHandlerAdapter{
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {

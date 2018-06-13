@@ -31,7 +31,7 @@ public class RpcServer {
                        public void initChannel(SocketChannel ch) throws Exception {
                            ch.pipeline()
                                    .addLast(new RpcResponseDecoderHandler())
-                                   .addLast(new EchoServerHandler())
+                                   .addLast(new DealRequestHandler())
                                    .addLast(new RpcResponseEncoderHandler());
                        }
                    });

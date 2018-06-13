@@ -6,10 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 import wang.mh.protocol.RsMessage;
 
 @Slf4j
-public class EchoClientHandler extends ChannelInboundHandlerAdapter {
+public class GetResultHandler extends ChannelInboundHandlerAdapter {
 
     private RpcClient client;
-    public EchoClientHandler(RpcClient client) {
+    public GetResultHandler(RpcClient client) {
         this.client = client;
     }
 

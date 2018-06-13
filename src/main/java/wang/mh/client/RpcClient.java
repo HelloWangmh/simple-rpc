@@ -37,7 +37,7 @@ public class RpcClient {
     public void start() throws Exception {
         this.group = new NioEventLoopGroup();
         Bootstrap bootstrap = new Bootstrap();
-        EchoClientHandler clientHandler = new EchoClientHandler(this);
+        GetResultHandler clientHandler = new GetResultHandler(this);
         bootstrap.group(group)
                 .channel(NioSocketChannel.class)
                 .remoteAddress(new InetSocketAddress(host, port))

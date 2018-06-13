@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0de9728a-d3f4-4371-9195-314f15f730df" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/client/EchoClientHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcMessage.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-rpc.iml" afterPath="$PROJECT_DIR$/simple-rpc.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/client/RpcClient.java" afterPath="$PROJECT_DIR$/src/main/java/wang/mh/client/RpcClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcMsgConverter.java" afterPath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcMsgConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcRequestDecoderHandler.java" afterPath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcRequestDecoderHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcRequestEncoderHandler.java" afterPath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcRequestEncoderHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcResponseDecoderHandler.java" afterPath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcResponseDecoderHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcResponseEncoderHandler.java" afterPath="$PROJECT_DIR$/src/main/java/wang/mh/protocol/RpcResponseEncoderHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/register/RegisterService.java" afterPath="$PROJECT_DIR$/src/main/java/wang/mh/register/RegisterService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wang/mh/server/EchoServerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/wang/mh/server/EchoServerHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/wang/mh/ClientTest.java" afterPath="$PROJECT_DIR$/src/test/java/wang/mh/ClientTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/wang/mh/CommonTest.java" afterPath="$PROJECT_DIR$/src/test/java/wang/mh/CommonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/wang/mh/ServerTest.java" afterPath="$PROJECT_DIR$/src/test/java/wang/mh/ServerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/wang/mh/model/User.java" afterPath="$PROJECT_DIR$/src/test/java/wang/mh/model/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/wang/mh/ComputeService.java" afterPath="$PROJECT_DIR$/src/test/java/wang/mh/service/ComputeService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/wang/mh/ComputeServiceImpl.java" afterPath="$PROJECT_DIR$/src/test/java/wang/mh/service/ComputeServiceImpl.java" />
-    </list>
+    <list default="true" id="0de9728a-d3f4-4371-9195-314f15f730df" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,21 +24,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ServerTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ServerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/wang/mh/ServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state relative-caret-position="115">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/wang/mh/ClientTest.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wang/mh/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/wang/mh/ClientTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -297,34 +287,6 @@
               <item name="simple-rpc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple-rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple-rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple-rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple-rpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-rpc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mh" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -620,7 +582,7 @@
       <workItem from="1528869404390" duration="697000" />
       <workItem from="1528872862994" duration="3614000" />
       <workItem from="1528876606736" duration="553000" />
-      <workItem from="1528877243371" duration="851000" />
+      <workItem from="1528877243371" duration="962000" />
     </task>
     <servers />
   </component>
@@ -631,11 +593,8 @@
     <history-entry file="ClientTest_start - 2018.06.13 at 16h 18m 55s.xml">
       <configuration name="ClientTest.start" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServerTest_startServer - 2018.06.13 at 15h 51m 06s.xml">
-      <configuration name="ServerTest.startServer" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ServerTest_startServer - 2018.06.13 at 15h 53m 09s.xml">
-      <configuration name="ServerTest.startServer" configurationId="JUnit" />
+    <history-entry file="ClientTest_start - 2018.06.13 at 16h 21m 35s.xml">
+      <configuration name="ClientTest.start" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ServerTest_startServer - 2018.06.13 at 15h 54m 13s.xml">
       <configuration name="ServerTest.startServer" configurationId="JUnit" />
@@ -655,9 +614,12 @@
     <history-entry file="ServerTest_startServer - 2018.06.13 at 16h 19m 11s.xml">
       <configuration name="ServerTest.startServer" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ServerTest_startServer - 2018.06.13 at 16h 21m 40s.xml">
+      <configuration name="ServerTest.startServer" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55362000" />
+    <option name="totallyTimeSpent" value="55473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,7 +644,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925257" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54301834" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32722145" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21907216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -691,7 +653,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50070524" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50070524" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -882,14 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1541">
           <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wang/mh/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1114,18 +1068,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wang/mh/ServerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/wang/mh/ClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="138">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wang/mh/ClientTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wang/mh/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wang/mh/ServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding />
         </state>
       </provider>
